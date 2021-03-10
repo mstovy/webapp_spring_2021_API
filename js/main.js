@@ -9,7 +9,7 @@ const app = Vue.createApp({
         searchGoogleBooks() {
             fetch('https://www.googleapis.com/books/v1/volumes?q=' + this.keyword + "&startIndex=0&maxResults=20&key=AIzaSyAveODishCcgrLnEShVh6Bp2unmkdqcucI")
                 .then(response => response.json())
-                .then(json => this.result = list)
+                .then(json => this.result = json)
         }
     }
 })
